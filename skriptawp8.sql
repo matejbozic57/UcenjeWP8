@@ -1,49 +1,48 @@
 ﻿
 -- ovo je komentar i ovo se ne izvodi
-
--- Redosljed rada:
--- 1. Pripremiti (napisati) upit
--- 2. Izvesti upit (F5)
--- 3. Provjeriti uspješnost izvođenja upita
--- 4. Spremiti datoteku (ctrl + s)
--- 5. Commit (i opcionalno push) na git
--- 6. Na kraju rada opabvezno push na git
---create database edunovawp8;
-
---drop database edunovawp8;
-
---use edunovawp8;
-
--- nazivi tablica u množini zbog C# EF
---create table smjerovi(
---sifra int,
---naziv varchar(50),
---cijena decimal(18,2),
---datumpokretanja datetime,
---aktivan bit
---);
+use master;
+go
+drop database if exists edunovawp8
+go
+create database edunovawp8;
+go
+use edunovawp8;
 
 
---create table grupe(
---sifra int,
---naziv varchar(20),
---smjer int,
---predavac varchar(50)
---);
 
---drop table polaznici;
+--nazivi tablica u množini zbog C# EF
 
---create table polaznici(
---sifra int,
---ime varchar(50),
---prezime varchar(50),
---email varchar(100)
---);
+create table smjerovi(
+sifra int not null primary key identity(1,1),
+naziv varchar(50) not null,
+cijena decimal(18,2) null, --null se ne mora pisati
+datumpokretanja datetime, --i ovo je null iako ne pise 
+aktivan bit not null default 0
+);
 
---create table clanovi(
---grupa int,
---polaznik int
---);
+
+
+create table grupe(
+sifra int not null primary key identity(1,1), 
+naziv varchar (20) not null,
+smjer int not null references smjerovi(sifra),
+predavac varchar(50)
+);
+
+
+
+create table polaznici(
+sifra int not null primary key identity(1,1),
+ime varchar(50) not null,
+prezime varchar(50) not null,
+email varchar(100)
+);
+
+create table clanovi(
+--tablica nemora nuzno imati sifru
+grupa int not null references grupe(sifra),
+polaznik int not null references polaznici(sifra),
+);
 
 
 
