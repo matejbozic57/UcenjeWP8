@@ -1,10 +1,44 @@
-﻿use edunovawp8;
+﻿
+-- ovo je komentar i ovo se ne izvodi
+use master;
+go
+drop database if exists edunovawp8;
+go
+create database edunovawp8 collate Croatian_CI_AS;
+go
+use edunovawp8;
 
-select * from smjerovi;
+-- nazivi tablica u množini zbog C# EF
+create table smjerovi(
+sifra int not null primary key identity(1,1),
+naziv varchar(50) not null,
+cijena decimal(18,2) null, -- null se ne mora pisati
+datumpokretanja datetime, -- i ovo je null iako ne piše
+aktivan bit not null default 0
+);
 
--- 1 -> ovo je sifra koju ce dodijeliti baza 
-insert into smjerovi (naziv,cijena,datumpokretanja,aktivan)
-values ('Web programiranje',1200.54,'2025-05-16 17:00:01',1);
+
+create table grupe(
+sifra int not null primary key identity(1,1),
+naziv varchar(20) not null,
+smjer int not null references smjerovi(sifra),
+predavac varchar(50)
+);
+
+create table polaznici(
+sifra int not null primary key identity(1,1),
+ime varchar(50) not null,
+prezime varchar(50) not null,
+email varchar(100)
+);
+
+create table clanovi(
+-- tablica nužno ne mora imati šifru
+grupa int not null references grupe(sifra),
+polaznik int not null references polaznici(sifra)
+);
+
+
 
 insert into smjerovi (naziv) values
 -- 2 
@@ -15,7 +49,6 @@ insert into smjerovi (naziv) values
 ('Marketing');
 
 -- sifre mogu biti bilo kojeg oblika 
-select * from grupe;
 
 insert into grupe (naziv,smjer)
 values
@@ -26,7 +59,6 @@ values
 -- 3
 ('S1',2);
 
-select * from polaznici
 --1 -29
 insert into polaznici (prezime, ime , email) values
 ('Gavran','Barbara','barbaragavran67@gmail.com'),
@@ -59,12 +91,13 @@ insert into polaznici (prezime, ime , email) values
 ('Mirković','Milivoje','daky696@gmail.com'),
 ('Andraković','Nenad','nenad.andrak@gmail.com');
 
-select * from clanovi;
-
 insert into clanovi (grupa,polaznik) values
 (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),
 (1,12),(1,13),(1,14),(1,15),(1,16),(1,17),(1,18),(1,19),(1,20),(1,21),
 (1,22),(1,23),(1,24),(1,25),(1,26),(1,27),(1,28),(1,29);
 
 insert into clanovi (grupa,polaznik) values
-(3,7), (3,17), (3,27), 
+(3,7), (3,17), (3,27);
+
+
+
