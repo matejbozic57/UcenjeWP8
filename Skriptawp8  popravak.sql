@@ -41,11 +41,12 @@ polaznik int not null references polaznici(sifra)
 
 
 insert into smjerovi (naziv) values
--- 2 
-('Serviser'),
--- 3
+('Web programiranje'),
+
 ('Web dizajn'),
--- 4
+
+('Serviser'),
+
 ('Marketing');
 
 -- sifre mogu biti bilo kojeg oblika 
