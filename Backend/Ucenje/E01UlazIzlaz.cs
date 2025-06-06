@@ -18,6 +18,9 @@ namespace Ucenje
             Console.Write("Pozdrav Svijetu");
 
             Console.WriteLine("isti red");
+            Console.WriteLine("Osijek je n SUPER "); 
+            Console.WriteLine("")
+            
 
         } // kraj metode
 
