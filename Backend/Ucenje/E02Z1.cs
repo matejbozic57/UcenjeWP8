@@ -14,16 +14,14 @@ namespace Ucenje
         {
         Console.WriteLine("E02Z1");
 
-        //zadatak: Program trazi unos plaće i ispisuje ju
+            //zadatak: Program trazi unos plaće i ispisuje ju
 
 
-
-
-        Console.Write("Unesi iznos place (npr. 123,456):");
-
-       double placa = double.Parse(Console.ReadLine());
-
-        Console.WriteLine("iznosPlace");
+            Console.Write("Unesi Placu Ovdje:");
+            int iznosPlace = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine(iznosPlace);
+            
 
         }
     }

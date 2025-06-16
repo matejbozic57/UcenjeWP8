@@ -40,7 +40,7 @@
 
             int cijeliBroj = int.MaxValue;
 
-            Console.WriteLine(int.MaxValue);
+            Console.WriteLine(cijeliBroj);
 
             Console.WriteLine(cijeliBroj +1);
 

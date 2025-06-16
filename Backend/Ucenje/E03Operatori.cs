@@ -26,7 +26,7 @@ namespace Ucenje
             Console.WriteLine(b);
 
             //uvecanje broja za 1
-            int i = 0;
+            int i = 2;
 
             i = i + 1;
 
@@ -35,7 +35,7 @@ namespace Ucenje
             ++i;
             //increment i decrement (++i,i++, --i, i--);
 
-            int k = 1, j = 0;
+            int k = 1, j = 1;
 
             k = ++k - j++; // 2-0, j= 1
 

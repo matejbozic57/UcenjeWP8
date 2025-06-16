@@ -12,13 +12,13 @@ namespace Ucenje
         public static void Izvedi()
         {
             Console.WriteLine("E04UvjetnoGrananjeIf");
+            Console.Write("Upisi Ocjenu:");
+            int ocjena = int.Parse(Console.ReadLine());
 
 
-            int broj = 17; // Ovo je unio korisnik
+          
 
-            // operator ==   provjera jednakosti, rezultat je bool tip podatka
-
-            bool uvjet = broj == 7;
+            bool uvjet = ocjena == 5;
 
 
 
@@ -26,29 +26,34 @@ namespace Ucenje
             // if radi s bool tipom podatka
             if (uvjet)
             {
-                Console.WriteLine("Super");
+                Console.WriteLine("Odlican");
             }
 
 
 
-            // if ne mora imati else
-            // if ne mora imati {} ali kada ih nema odnosi se samo na prvu sljedeću liniju
+          
 
-            // puna sintaksa if naredbe
-
-            if (broj > 2)
+            if (ocjena == 4)
             {
-                Console.WriteLine("OK");
+                Console.WriteLine("Vrlo Dobar");
             }
-            else if (broj == 1)
+            else if (ocjena == 3)
             {
-                Console.WriteLine("Nije dobro");
-            }
-            else
-            {
-                Console.WriteLine("NIJE OCJENA");
-            }
+                Console.WriteLine("Dobar");
 
+            }
+            else if (ocjena == 2)
+            {
+                Console.WriteLine("Dovoljan");
+            }
+            else if (ocjena == 1)
+            {
+                Console.WriteLine("Nedovoljan");
+            }
+            else if (ocjena > 5)
+                {
+                Console.WriteLine("Nije Ocjena");
+            }
 
 
             // operatori < >, >=, <=, != se koriste u if-u
