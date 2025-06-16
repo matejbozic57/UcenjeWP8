@@ -16,13 +16,13 @@ namespace Ucenje
             int i = 0;
             bool uvjet = bozinePare == 0;
 
-            if (uvjet)
+            if(uvjet)
             {
                 Console.WriteLine("klasika bozo nema para");
 
 
             }
-            if (uvjet && i > 0) 
+            else if (bozinePare > 0) 
             {
                 Console.WriteLine("Vidi bozo ima para");
             }
