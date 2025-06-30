@@ -1,6 +1,11 @@
 ﻿
 
 using Ucenje;
+new Ucenje.E19KonzolnaAplikacija.Izbornik();
+//new E18GSALE.Program;
+//new E16Polimorfizam.Program;
+//new E15Nasljedivanje.Program;
+//new E14KlasaObjekt.Progeram;
 //E13Rekurzija.Izvedi();
 //E12Metode.Izvedi();
 //E11TryCatch.Izvedi();
@@ -14,4 +19,4 @@ using Ucenje;
 //E02Varijable.Izvedi();
 //E01UlazIzlaz.Izvedi();
 //E02Z1.Izvedi();
-vjezbanjekuci.Izvedi();
+//vjezbanjekuci.Izvedi();
