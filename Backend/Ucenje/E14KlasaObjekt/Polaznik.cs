@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E14KlasaObjekt
 {
-    internal class Program
+    internal class Polaznik
     {
     }
 }

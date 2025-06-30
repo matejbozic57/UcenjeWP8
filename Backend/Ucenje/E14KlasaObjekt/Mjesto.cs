@@ -1,11 +1,12 @@
-﻿namespace Ucenje.E14KlasaObjekt
-{
-    // POCO - Plain Old C# Object
-    public class Mjesto
-    {
-        public string? PostanskiBroj { get; set; }
-        public string? Naziv { get; set; }
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        public Zupanija? Zupanija { get; set; }
+namespace Ucenje.E14KlasaObjekt
+{
+    internal class Mjesto
+    {
     }
 }
