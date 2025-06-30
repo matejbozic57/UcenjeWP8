@@ -1,7 +1,7 @@
 ﻿
 
 using Ucenje;
-E13Rekurzija.Izvedi();
+//E13Rekurzija.Izvedi();
 //E12Metode.Izvedi();
 //E11TryCatch.Izvedi();
 //E08WhilePetlja.Izvedi();
@@ -14,4 +14,4 @@ E13Rekurzija.Izvedi();
 //E02Varijable.Izvedi();
 //E01UlazIzlaz.Izvedi();
 //E02Z1.Izvedi();
-//vjezbanjekuci.Izvedi();
+vjezbanjekuci.Izvedi();
