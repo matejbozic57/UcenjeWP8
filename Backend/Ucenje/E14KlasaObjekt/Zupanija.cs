@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ucenje.E14KlasaObjekt
+﻿namespace Ucenje.E14KlasaObjekt
 {
-    internal class Zupanija
+    public class Zupanija
     {
+        public string Naziv { get; set; } = "";
+
+        public Osoba Zupan { get; set; } = new Osoba();
+
     }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ucenje.E15Nasljedivanje
+﻿namespace Ucenje.E15Nasljedivanje.edunova
 {
-    internal class Smjer
+    public class Smjer : SvojstvoNaziv
     {
+        public decimal Cijena { get; set; }
+        public DateTime? DatumPokretanja { get; set; }
+        public bool Aktivan { get; set; }
     }
 }

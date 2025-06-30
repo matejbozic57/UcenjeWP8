@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E18GSALE
 {
-    internal interface IObrada
+    public interface IObrada
     {
+
+        public string Metoda();
+        public void OdradiPosao();
+
     }
 }

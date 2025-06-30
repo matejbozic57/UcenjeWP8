@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E18GSALE
 {
-    internal class Obrada
+    public class Obrada<T> // T je oznaka TYPE a može biti bilo koje slovo ili niz slova
     {
+
+        public T? PredmetObrade { get; set; }
+
+        [Obsolete("Ovo više nemoj koristiti")]
+        public void Posao()
+        {
+            Console.WriteLine("Obrađujem {0}", PredmetObrade);
+
+            // Primjer depricated u C#
+            // Thread.ResetAbort();
+        }
+
     }
 }

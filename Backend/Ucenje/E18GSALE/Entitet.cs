@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E18GSALE
 {
-    internal class Entitet
+    public abstract class Entitet : Object // ovo : Object ne treba pisati
     {
+        public int Sifra { get; set; }
     }
 }
